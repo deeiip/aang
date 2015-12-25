@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, redirect, request
 from flask import render_template
 from flask.ext.sqlalchemy import SQLAlchemy
 
@@ -40,10 +40,13 @@ class Comments(db.Model):
 
 @app.route('/')
 @app.route('/Index')
-def hello_world():
+def home_page():
     # news = NewsModel('http://test.com/gweg6rufhgfvfdbhd')
     # db.session.add(news)
     # db.session.commit()
+    about = request.args.get('subject')
+    if about is None:
+        return redirect("/start", code=302)
     newss = db.session.query(NewsModel).filter_by(url='http://test.com/gweg')
     print(newss)
     for nm in newss:
@@ -51,6 +54,10 @@ def hello_world():
         print(nm.about)
     return render_template('index.html')
 
+
+@app.route('/start')
+def start_page():
+    return render_template('login.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

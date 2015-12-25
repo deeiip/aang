@@ -1,7 +1,6 @@
 from flask import Flask
 from flask import render_template
 from flask.ext.sqlalchemy import SQLAlchemy
-from news_data_model import *
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://jlanaajgscrrlo:wXwt2_X1sKZwZ91Y8tFRbC" \
@@ -27,12 +26,29 @@ class NewsModel(db.Model):
         return '<Url %r>' % self.url
 
 
+class Comments(db.Model):
+    id = db.Column(db.INTEGER, primary_key=True)
+    about = db.Column(db.String(50))
+    comment = db.Column(db.String(268))
+    comm_by = db.Column(db.String(50))
+
+    def __init__(self, about, by, comment):
+        self.about = about
+        self.comm_by = by
+        self.comment = comment
+
+
 @app.route('/')
 @app.route('/Index')
 def hello_world():
-    news = NewsModel('http://test.com/gweg')
-    db.session.add(news)
-    db.session.commit()
+    # news = NewsModel('http://test.com/gweg6rufhgfvfdbhd')
+    # db.session.add(news)
+    # db.session.commit()
+    newss = db.session.query(NewsModel).filter_by(url='http://test.com/gweg')
+    print(newss)
+    for nm in newss:
+        print(nm.url)
+        print(nm.about)
     return render_template('index.html')
 
 

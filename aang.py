@@ -1,6 +1,8 @@
 from flask import Flask, redirect, request
 from flask import render_template
 from flask.ext.sqlalchemy import SQLAlchemy
+from alchemi_rest import *
+
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://jlanaajgscrrlo:wXwt2_X1sKZwZ91Y8tFRbC" \
@@ -58,6 +60,14 @@ def home_page():
 @app.route('/start')
 def start_page():
     return render_template('login.html')
+
+
+@app.route('/data')
+def ajax_all_data():
+    about = request.args.get('subject')
+    if about is None:
+        return "Invalid Ajax query"
+    return "all data"
 
 if __name__ == '__main__':
     app.run(debug=True)

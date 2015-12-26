@@ -1,5 +1,4 @@
-from flask import Flask, redirect, request
-from flask import render_template
+from flask import Flask, redirect, request, render_template
 from flask.ext.sqlalchemy import SQLAlchemy
 import json
 from alchemi_rest import *
@@ -84,6 +83,7 @@ def ajax_all_data():
     if about is None:
         return "Invalid Ajax query"
     else:
+        # create_db_entry('TCS')
         ret = '['
         result = db.session.query(NewsModel).filter_by(about=about)
         for item in result:
@@ -91,6 +91,35 @@ def ajax_all_data():
         ret = ret[:-1]
         ret += ']'
         return ret
+
+
+def create_db_entry(name):
+    reqst = Request('', '')
+    newses = reqst.request()
+    for news in newses:
+        news_model = NewsModel(news.url)
+        news_model.about = 'tcs'
+        news_model.author = news.author
+        news_model.title = news.title
+        news_model.sentiment = json.dumps(news.sentiment.__dict__)
+        enstr = '['
+        for entity in news.entities:
+            enstr += json.dumps(entity.__dict__)
+            enstr += ','
+        if len(news.entities) != 0:
+            enstr = enstr[:-1]
+        enstr += ']'
+        news_model.entities = enstr
+        constr = '['
+        for conc in news.concept:
+            constr += json.dumps(conc.__dict__)
+            constr += ','
+        if len(news.concept) != 0:
+            constr = constr[:-1]
+        constr += ']'
+        news_model.concepts = constr
+        db.session.add(news_model)
+    db.session.commit()
 
 if __name__ == '__main__':
     app.run(debug=True)

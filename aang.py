@@ -1,6 +1,7 @@
 from flask import Flask, redirect, request
 from flask import render_template
 from flask.ext.sqlalchemy import SQLAlchemy
+import json
 from alchemi_rest import *
 
 
@@ -20,6 +21,8 @@ class NewsModel(db.Model):
     sentiment = db.Column(db.Text)
     author = db.Column(db.String(150))
     title = db.Column(db.String(400))
+    attrs = ['url','about','entities',
+                      'concepts','sentiment','author','title']
 
     def __init__(self, url):
         self.url = url
@@ -33,11 +36,25 @@ class Comments(db.Model):
     about = db.Column(db.String(50))
     comment = db.Column(db.String(268))
     comm_by = db.Column(db.String(50))
+    attrs = ['id','about','comment', 'comm_by']
 
     def __init__(self, about, by, comment):
         self.about = about
         self.comm_by = by
         self.comment = comment
+
+
+def create_json_from_model(model):
+    temp_dict = {}
+    for item in model.attrs:
+        current = getattr(model, item)
+        temp_dict[item] = current
+        print(getattr(model, item))
+    # for item in dir(model):
+    #     if not item.startswith('__'):
+    #         print(item)
+    #         print(getattr(model, item))
+    return json.dumps(temp_dict)
 
 
 @app.route('/')
@@ -52,8 +69,7 @@ def home_page():
     newss = db.session.query(NewsModel).filter_by(url='http://test.com/gweg')
     print(newss)
     for nm in newss:
-        print(nm.url)
-        print(nm.about)
+        chk = create_json_from_model(nm)
     return render_template('index.html')
 
 
@@ -67,7 +83,14 @@ def ajax_all_data():
     about = request.args.get('subject')
     if about is None:
         return "Invalid Ajax query"
-    return "all data"
+    else:
+        ret = '['
+        result = db.session.query(NewsModel).filter_by(about=about)
+        for item in result:
+            ret += create_json_from_model(item) + ','
+        ret = ret[:-1]
+        ret += ']'
+        return ret
 
 if __name__ == '__main__':
     app.run(debug=True)

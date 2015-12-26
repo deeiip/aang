@@ -90,7 +90,7 @@ def ajax_all_data():
             ret += create_json_from_model(item) + ','
         ret = ret[:-1]
         ret += ']'
-        return ret
+    return ret
 
 
 def create_db_entry(name):

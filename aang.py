@@ -1,4 +1,4 @@
-from flask import Flask, redirect, request, render_template
+from flask import Flask, redirect, request, render_template, Response
 from flask.ext.sqlalchemy import SQLAlchemy
 import json
 from alchemi_rest import *
@@ -97,7 +97,7 @@ def ajax_all_data():
         if count != 0:
             ret = ret[:-1]
         ret += ']'
-    return ret
+    return Response(ret, mimetype='text/json')
 
 
 @app.errorhandler(404)

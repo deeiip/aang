@@ -2,13 +2,15 @@ from flask import Flask, redirect, request, render_template
 from flask.ext.sqlalchemy import SQLAlchemy
 import json
 from alchemi_rest import *
-
+import sys
+import logging
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://jlanaajgscrrlo:wXwt2_X1sKZwZ91Y8tFRbC" \
                                         "BfrL@ec2-107-22-184-127.compute-1.amazonaws.com:5432/da1cenu2lbulpo"
 db = SQLAlchemy(app)
-
+app.logger.addHandler(logging.StreamHandler(sys.stdout))
+app.logger.setLevel(logging.ERROR)
 # app = Flask(__name__)
 
 
@@ -48,7 +50,7 @@ def create_json_from_model(model):
     for item in model.attrs:
         current = getattr(model, item)
         temp_dict[item] = current
-        print(getattr(model, item))
+        # print(getattr(model, item))
     # for item in dir(model):
     #     if not item.startswith('__'):
     #         print(item)
@@ -66,7 +68,7 @@ def home_page():
     if about is None:
         return redirect("/start", code=302)
     newss = db.session.query(NewsModel).filter_by(url='http://test.com/gweg')
-    print(newss)
+    # print(newss)
     for nm in newss:
         chk = create_json_from_model(nm)
     return render_template('index.html')
@@ -121,6 +123,7 @@ def create_db_entry(name):
         db.session.add(news_model)
     db.session.commit()
 
+PROPAGATE_EXCEPTIONS = True
 if __name__ == '__main__':
     app.run(debug=True)
 

@@ -7,6 +7,7 @@ class Request:
 
     def __init__(self, api_key, txt):
         self.url = None
+        self.txt = txt.lower()
         self.url_template = "https://access.alchemyapi.com/calls/data/GetNews?" \
                             "apikey=" + api_key + "&return=enriched.url.title,enriched.url.url,enriched.url.author," \
                             "enriched.url.publicationDate," \
@@ -38,12 +39,16 @@ class Request:
             ret.append(temp)
         return ret
 
-    def request(self):
-        # data = urllib2.urlopen(self.url_template).read()
-        # ret = self.parse_alchemi_json(data)
-        with open('TCS.json') as file_content:
-            ret = file_content.read()
-        data = self.parse_alchemi_json(ret)
+    def request(self, is_file=True):
+
+        if is_file:
+            file_name = self.txt + '.json'
+            with open('TCS.json') as file_content:
+                ret = file_content.read()
+            data = self.parse_alchemi_json(ret)
+        else:
+            ret = urllib2.urlopen(self.url_template).read()
+            data = self.parse_alchemi_json(ret)
         return data
 
 

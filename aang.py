@@ -82,25 +82,44 @@ def start_page():
 @app.route('/data')
 def ajax_all_data():
     about = request.args.get('subject')
+
     if about is None:
         return "Invalid Ajax query"
     else:
         # create_db_entry('TCS')
+        about = about.lower()
         ret = '['
         result = db.session.query(NewsModel).filter_by(about=about)
+        count = 0
         for item in result:
             ret += create_json_from_model(item) + ','
-        ret = ret[:-1]
+            count += 1
+        if count != 0:
+            ret = ret[:-1]
         ret += ']'
     return ret
 
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html', error_code='404', message='We could not find the page you were looking for.')\
+        , 404
+
+
+@app.errorhandler(500)
+def application_error(e):
+    return render_template('404.html', error_code='500', message='App encountered an unexpected'
+                                                                 ' error. Rest assured, we will do our part')\
+        , 500
+
+
 def create_db_entry(name):
-    reqst = Request('', '')
+    name = name.lower()
+    reqst = Request(API_KEY, name)
     newses = reqst.request()
     for news in newses:
         news_model = NewsModel(news.url)
-        news_model.about = 'tcs'
+        news_model.about = name
         news_model.author = news.author
         news_model.title = news.title
         news_model.sentiment = json.dumps(news.sentiment.__dict__)

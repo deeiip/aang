@@ -67,10 +67,10 @@ def home_page():
     about = request.args.get('subject')
     if about is None:
         return redirect("/start", code=302)
-    newss = db.session.query(NewsModel).filter_by(url='http://test.com/gweg')
+    # newss = db.session.query(NewsModel).filter_by(url='http://test.com/gweg')
     # print(newss)
-    for nm in newss:
-        chk = create_json_from_model(nm)
+    # for nm in newss:
+        # chk = create_json_from_model(nm)
     return render_template('index.html')
 
 
@@ -99,15 +99,41 @@ def ajax_all_data():
         ret += ']'
     return Response(ret, mimetype='text/json')
 
+@app.route('/media_data')
+def media_det_ajax():
+    about = request.args.get('subject')
+    src = request.args.get('channel')
+    if (about is None) or (src is None):
+        return "Invalid Ajax Query"
+    else:
+        about = about.lower()
+        ret = '['
+        result = db.session.query(NewsModel).filter(NewsModel.url.contains(src)).filter_by(about=about)
+        count = 0
+        for item in result:
+            ret += create_json_from_model(item) + ','
+            count += 1
+        if count != 0:
+            ret = ret[:-1]
+        ret += ']'
+    return Response(ret, mimetype='text/json')
+
+
+@app.route('/media')
+def media_house_involvement():
+    return render_template('media_glance.html')
+
 
 @app.errorhandler(404)
 def page_not_found(e):
+    create_db_entry('tcs')
     return render_template('404.html', error_code='404', message='We could not find the page you were looking for.')\
         , 404
 
 
 @app.errorhandler(500)
 def application_error(e):
+
     return render_template('404.html', error_code='500', message='App encountered an unexpected'
                                                                  ' error. Rest assured, we will do our part')\
         , 500
@@ -139,10 +165,10 @@ def create_db_entry(name):
             constr = constr[:-1]
         constr += ']'
         news_model.concepts = constr
-        db.session.add(news_model)
+        db.session.merge(news_model)
     db.session.commit()
 
-PROPAGATE_EXCEPTIONS = True
+
 if __name__ == '__main__':
     app.run(debug=True)
 

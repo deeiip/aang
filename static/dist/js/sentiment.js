@@ -87,6 +87,8 @@ $.get(ajaxUrl, function(data, status){
 
     }
 
+    var total_object = data.length;
+    $('#total_occurance').html(data.length);
     // construct presenter object
     var overall_coverage_data = [{
         value: positive_coverage_count,
@@ -137,5 +139,99 @@ $.get(ajaxUrl, function(data, status){
 
     };
     $('#overall-waiting').hide();
-    var myDoughnutChart = new Chart(ctx).Doughnut(overall_coverage_data,options);
+    var myDoughnutChart_overall = new Chart(ctx).Doughnut(overall_coverage_data,options);
+    var positive_coverage_data = [];
+    var pos_count = 0;
+    for (var key in positive_coverage) {
+      var current_color = '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
+      if (positive_coverage.hasOwnProperty(key)) {
+
+		var temp = {
+			value: positive_coverage[key],
+			color: current_color,
+			highlight: current_color,
+			label: key
+		};
+          pos_count += positive_coverage[key];
+		positive_coverage_data.push(temp);
+      }
+    }
+
+
+    var htm2 = Math.floor((pos_count*100)/ total_object).toString()
+        + '<sup style="font-size: 20px">%</sup>';
+    $('#positive_percentage').html(htm2);
+    var ctx1 = $("#positive-chart").get(0).getContext("2d");
+    var myDoughnutChart_positive = new Chart(ctx1).Doughnut(positive_coverage_data,options);
+    var target = $('#positive_entry_list');
+    var temp = '';
+
+    for (var i = 0; i < positive_coverage_data.length; i++){
+        temp += '<li></i><a href="#"><span'+
+            'class="pull-right text-red"><i class="fa fa-circle-o" style="color:'+
+                positive_coverage_data[i].color +
+            ';"></i> &nbsp; &nbsp; '+ positive_coverage_data[i].value+
+            '</span> &nbsp; &nbsp; &nbsp;'+ positive_coverage_data[i].label +' </a></li>';
+    }
+    target.html(temp);
+
+    var negative_coverage_data = [];
+    var neg_count = 0;
+    for (var key in negative_coverage){
+		var current_color = '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
+		if(negative_coverage.hasOwnProperty(key))
+        {
+			var temp = {
+				value: negative_coverage[key],
+				color: current_color,
+				highlight: current_color,
+				label: key
+			};
+			negative_coverage_data.push(temp);
+            neg_count += negative_coverage[key];
+		}
+    }
+    var temp = '';
+    for (var i = 0 ; i < negative_coverage_data.length; i++)
+    {
+        temp += '<li></i><a href="#"><span'+
+            'class="pull-right text-red"><i class="fa fa-circle-o" style="color:'+
+                negative_coverage_data[i].color +
+            ';"></i> &nbsp; &nbsp; '+ negative_coverage_data[i].value+
+            '</span> &nbsp; &nbsp; &nbsp;'+ negative_coverage_data[i].label +' </a></li>';
+    }
+    var target_negative = $('#negative_entry_list');
+    target_negative.html(temp);
+    var htm1 = Math.floor((neg_count*100)/ total_object).toString()
+        + '<sup style="font-size: 20px">%</sup>';
+    $('#negative_percentage').html(htm1);
+    var ctx2 = $("#negative-chart").get(0).getContext("2d");
+    var myDoughnutChart_negative = new Chart(ctx2).Doughnut(negative_coverage_data, options);
+
+    var mixed_coverage_data = [];
+    for (var key in mixed_coverage){
+        if(mixed_coverage.hasOwnProperty(key)){
+            var current_color = '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
+            var temp = {
+                value: mixed_coverage[key],
+				color: current_color,
+				highlight: current_color,
+				label: key
+            };
+            mixed_coverage_data.push(temp);
+        }
+    }
+    var target_mixed = $('#mixed_entry_list');
+    var temp = '';
+    for (var i = 0; i < mixed_coverage_data.length ; i++){
+        temp += '<li></i><a href="#"><span'+
+            'class="pull-right text-red"><i class="fa fa-circle-o" style="color:'+
+                mixed_coverage_data[i].color +
+            ';"></i> &nbsp; &nbsp; '+ mixed_coverage_data[i].value+
+            '</span> &nbsp; &nbsp; &nbsp;'+ mixed_coverage_data[i].label +' </a></li>';
+    }
+    target_mixed.html(temp);
+
+    var ctx3 = $("#mixed-chart").get(0).getContext("2d");
+    var myDoughnutChart_mixed = new Chart(ctx3).Doughnut(mixed_coverage_data, options);
 });

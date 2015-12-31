@@ -36,6 +36,8 @@ class Request:
             senti = target['enrichedTitle']['docSentiment']
             temp.sentiment = Sentiment(senti['mixed'], senti['score'], senti['type'])
             temp.author = target['author']
+            pub_conf = target['publicationDate']
+            temp.publication_date = target['publicationDate']['date']
             ret.append(temp)
         return ret
 
@@ -43,7 +45,7 @@ class Request:
 
         if is_file:
             file_name = self.txt + '.json'
-            with open('TCS.json') as file_content:
+            with open(file_name) as file_content:
                 ret = file_content.read()
             data = self.parse_alchemi_json(ret)
         else:

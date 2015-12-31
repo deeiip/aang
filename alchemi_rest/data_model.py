@@ -18,6 +18,11 @@ class Entity:
         self.typ = typ
 
 
+class PubDate:
+    def __init__(self, confident, date):
+        self.confident = confident
+        self.date = date
+
 class DataModel:
 
     def __init__(self):

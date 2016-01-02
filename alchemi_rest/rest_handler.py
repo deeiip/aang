@@ -13,7 +13,7 @@ class Request:
                             "enriched.url.publicationDate," \
                             "enriched.url.enrichedTitle.entities," \
                             "enriched.url.enrichedTitle.docSentiment,enriched.url.enrichedTitle.concepts&start=" \
-                            "1450396800&end=1451084400&q.enriched.url.enrichedTitle.entities.entity=|" \
+                            "1450571400&end=1451775600&q.enriched.url.enrichedTitle.entities.entity=|" \
                             "text=" + txt + ",type=company|&q.enriched.url.enrichedTitle.docSentiment." \
                             "type=positive&count=25&outputMode=json"
 

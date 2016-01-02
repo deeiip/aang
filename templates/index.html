@@ -40,7 +40,6 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-
   </head>
   <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
@@ -369,6 +368,26 @@
       <!-- Add the sidebar's background. This div must be placed
            immediately after the control sidebar -->
       <div class="control-sidebar-bg"></div>
+
+            <div class="modal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close data-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">No Data Available</h4>
+                  </div>
+                  <div class="modal-body" id="modal-error-field">
+                    <p>There is no data for the company in cache. So we need to serach each corner of the internet.
+                        This may take a couple of seconds. You need to hit refresh then&hellip;</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left data-close" data-dismiss="modal">Close</button>
+                    <button id="data-refresh" type="button" class="btn btn-primary">Refresh</button>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
     </div><!-- ./wrapper -->
 
     <!-- jQuery 2.1.4 -->

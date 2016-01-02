@@ -140,10 +140,20 @@ def application_error(e):
         , 500
 
 
-def create_db_entry(name):
+@app.route('/create_data')
+def create_data():
+    about = request.args.get('subject')
+    try:
+        create_db_entry(about, False)
+        return "success"
+    except Exception:
+        return "fail"
+
+
+def create_db_entry(name, from_file=True):
     name = name.lower()
     reqst = Request(API_KEY, name)
-    newses = reqst.request()
+    newses = reqst.request(from_file)
     for news in newses:
         news_model = NewsModel(news.url)
         news_model.about = name

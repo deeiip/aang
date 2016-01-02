@@ -34,6 +34,10 @@ var mixed_coverage = [];
 var target = getParameterByName('subject').toLowerCase();
 var ajaxUrl = '/data?subject='+target;
 $.get(ajaxUrl, function(data, status){
+    if(data.length == 0){
+        $('.modal').show();
+        return;
+    }
     for(var i = 0; i< data.length; i++)
     {
         var temp = data[i];
@@ -239,4 +243,22 @@ $.get(ajaxUrl, function(data, status){
         window.location.href = "/media?channel="+media_src+"&subject="+getParameterByName('subject');
         //alert();
     })
+});
+$('#data-refresh').click(function(data){
+    $('#data-refresh').html('<i class="fa fa-refresh fa-spin"></i> Refresh');
+    var targetUrl = '/create_data?subject=' + getParameterByName('subject').toLowerCase();
+    $.get(targetUrl, function(data, status){
+        if(data=="fail"){
+            $('#modal-error-field').html('Rate limit exceeded for the day. Sorry you cant analyze more');
+            $('#data-refresh').html('Refresh')
+        }
+        else {
+            $('.modal').hide();
+            location.reload();
+        }
+    });
+});
+
+$('.data-close').click(function(data){
+    $('.modal').hide();
 });

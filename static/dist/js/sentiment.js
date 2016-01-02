@@ -1,6 +1,17 @@
 /**
  * Created by dipanjan on 27/12/15.
  */
+Array.prototype.getUnique = function(){
+   var u = {}, a = [];
+   for(var i = 0, l = this.length; i < l; ++i){
+      if(u.hasOwnProperty(this[i])) {
+         continue;
+      }
+      a.push(this[i]);
+      u[this[i]] = 1;
+   }
+   return a;
+}
 function getParameterByName(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -30,7 +41,7 @@ var mixed_coverage_count = 0;
 var positive_coverage = [];
 var negative_coverage = [];
 var mixed_coverage = [];
-
+var author_names = [];
 var target = getParameterByName('subject').toLowerCase();
 var ajaxUrl = '/data?subject='+target;
 $.get(ajaxUrl, function(data, status){
@@ -45,6 +56,9 @@ $.get(ajaxUrl, function(data, status){
         temp.entities = eval(temp.concepts);
         temp.sentiment = JSON.parse(temp.sentiment);
         data[i] = temp;
+        if(temp.author !="" && temp.author != " "){
+            author_names.push(temp.author);
+        }
     }
 
     // clean object from here
@@ -242,7 +256,21 @@ $.get(ajaxUrl, function(data, status){
         var media_src = $(this).data('target');
         window.location.href = "/media?channel="+media_src+"&subject="+getParameterByName('subject');
         //alert();
-    })
+    });
+
+    var tabHtml = '<tr>'+
+                      '<th style="width: 10px">#</th>'+
+                      '<th>Author</th>'+
+
+                    '</tr>';
+    author_names = author_names.getUnique();
+    for(var i = 0; i< author_names.length; i++){
+        tabHtml += '<tr>'+
+                      '<td>'+(i+1)+'</td>'+
+                      '<td>'+ author_names[i]+'</td>'+
+                    '</tr>';
+    }
+    $('#author-box').html(tabHtml);
 });
 $('#data-refresh').click(function(data){
     $('#data-refresh').html('<i class="fa fa-refresh fa-spin"></i> Refresh');

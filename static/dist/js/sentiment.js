@@ -167,7 +167,7 @@ $.get(ajaxUrl, function(data, status){
     var temp = '';
 
     for (var i = 0; i < positive_coverage_data.length; i++){
-        temp += '<li></i><a href="#"><span'+
+        temp += '<li></i><a class="media-name" data-target="'+positive_coverage_data[i].label+ '" href="#"><span'+
             'class="pull-right text-red"><i class="fa fa-circle-o" style="color:'+
                 positive_coverage_data[i].color +
             ';"></i> &nbsp; &nbsp; '+ positive_coverage_data[i].value+
@@ -194,7 +194,7 @@ $.get(ajaxUrl, function(data, status){
     var temp = '';
     for (var i = 0 ; i < negative_coverage_data.length; i++)
     {
-        temp += '<li></i><a href="#"><span'+
+        temp += '<li></i><a class="media-name" data-target="'+ negative_coverage_data[i].label +'" href="#"><span'+
             'class="pull-right text-red"><i class="fa fa-circle-o" style="color:'+
                 negative_coverage_data[i].color +
             ';"></i> &nbsp; &nbsp; '+ negative_coverage_data[i].value+
@@ -224,7 +224,7 @@ $.get(ajaxUrl, function(data, status){
     var target_mixed = $('#mixed_entry_list');
     var temp = '';
     for (var i = 0; i < mixed_coverage_data.length ; i++){
-        temp += '<li></i><a href="#"><span'+
+        temp += '<li></i><a data-target="'+ mixed_coverage_data[i].label +'" class="media-name" href="#"><span'+
             'class="pull-right text-red"><i class="fa fa-circle-o" style="color:'+
                 mixed_coverage_data[i].color +
             ';"></i> &nbsp; &nbsp; '+ mixed_coverage_data[i].value+
@@ -234,4 +234,9 @@ $.get(ajaxUrl, function(data, status){
 
     var ctx3 = $("#mixed-chart").get(0).getContext("2d");
     var myDoughnutChart_mixed = new Chart(ctx3).Doughnut(mixed_coverage_data, options);
+    $('.media-name').click(function(data){
+        var media_src = $(this).data('target');
+        window.location.href = "/media?channel="+media_src+"&subject="+getParameterByName('subject');
+        //alert();
+    })
 });

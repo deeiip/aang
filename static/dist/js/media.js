@@ -1,7 +1,12 @@
-
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
 var target = getParameterByName('subject').toLowerCase();
 var channel = getParameterByName('channel').toLowerCase();
-var ajaxUrl = '/data?subject='+target+'&channel='+channel;
+var ajaxUrl = '/media_data?subject='+target+'&channel='+channel;
 $.get(ajaxUrl, function(data, status){
     for(var i = 0; i< data.length; i++)
     {
@@ -12,14 +17,30 @@ $.get(ajaxUrl, function(data, status){
         data[i] = temp;
     }
     var target = $('#content-body');
-    var temp = '';
+    var htm = '';
     for(var i = 0 ; i< data.length; i++)
     {
-        temp += '<div class="alert alert-info alert-dismissable">'+
+        var target_class = 'alert-';
+        if(data[i].sentiment.mixed == 1)
+        {
+            target_class += 'warning'
+        }
+        else {
+            if (data[i].sentiment.typ == "positive") {
+                target_class += 'success';
+            }
+            else if (data[i].sentiment.typ == "negative") {
+                target_class += 'danger';
+            }
+            else {
+                target_class += 'info';
+            }
+        }
+        htm += '<div style="text-decoration:none!important;" class="alert '+ target_class+' alert-dismissable">'+
                     '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'+
-                    '<h4><i class="icon fa fa-info"></i> Alert!</h4>'+
-                    'Info alert preview. This alert is dismissable.'+
+                    '<a target="_blank" href="'+ data[i].url + '"> <h4><i class="icon fa fa-info"></i>'+ data[i].title +' </h4> </a>'+
+                    data[i].author+
                   '</div>';
     }
-    target.html(temp);
-}
+    $('#content-body').html(htm);
+});

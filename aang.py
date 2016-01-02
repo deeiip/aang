@@ -121,7 +121,8 @@ def media_det_ajax():
 
 @app.route('/media')
 def media_house_involvement():
-    return render_template('media_glance.html')
+    src = request.args.get('channel')
+    return render_template('media_glance.html', detail_by = src)
 
 
 @app.errorhandler(404)

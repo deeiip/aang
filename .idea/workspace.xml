@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bde4d936-0ade-4da8-afee-aa46f8dcaa55" name="Default" comment="" />
+    <list default="true" id="bde4d936-0ade-4da8-afee-aa46f8dcaa55" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/dist/js/author.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/author_glance.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aang.py" afterPath="$PROJECT_DIR$/aang.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/dist/js/sentiment.js" afterPath="$PROJECT_DIR$/static/dist/js/sentiment.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
+    </list>
     <ignored path="aang.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -15,7 +22,7 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/aang$Unnamed.coverage" NAME="Aang Coverage Results" MODIFIED="1451746101368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/aang$Aang.coverage" NAME="Aang Coverage Results" MODIFIED="1451747068832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/aang$Aang.coverage" NAME="Aang Coverage Results" MODIFIED="1451768468778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -26,32 +33,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="sentiment.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sentiment.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/dist/js/sentiment.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4318182">
-              <caret line="259" column="0" selection-start-line="259" selection-start-column="0" selection-end-line="259" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.387097">
+              <caret line="158" column="30" selection-start-line="158" selection-start-column="28" selection-end-line="158" selection-end-column="30" />
               <folding>
-                <marker date="1451747831945" expanded="true" signature="4431:4474" placeholder="..." />
-                <marker date="1451747831945" expanded="true" signature="5245:5260" placeholder="..." />
-                <marker date="1451747831945" expanded="true" signature="5782:5855" placeholder="..." />
-                <marker date="1451747831945" expanded="true" signature="6777:6850" placeholder="..." />
-                <marker date="1451747831945" expanded="true" signature="7180:7195" placeholder="..." />
-                <marker date="1451747831945" expanded="true" signature="8150:8220" placeholder="..." />
-                <marker date="1451747831945" expanded="true" signature="8787:8888" placeholder="..." />
-                <marker date="1451747831945" expanded="true" signature="8787:8914" placeholder="..." />
-                <marker date="1451747831945" expanded="true" signature="8825:8836" placeholder="..." />
-                <marker date="1451747831945" expanded="true" signature="9035:9163" placeholder="..." />
+                <marker date="1451768816653" expanded="true" signature="4431:4474" placeholder="..." />
+                <marker date="1451768816653" expanded="true" signature="5245:5260" placeholder="..." />
+                <marker date="1451768816653" expanded="true" signature="5782:5855" placeholder="..." />
+                <marker date="1451768816653" expanded="true" signature="6777:6850" placeholder="..." />
+                <marker date="1451768816653" expanded="true" signature="7180:7195" placeholder="..." />
+                <marker date="1451768816653" expanded="true" signature="8150:8220" placeholder="..." />
+                <marker date="1451768816653" expanded="true" signature="8992:9093" placeholder="..." />
+                <marker date="1451768816653" expanded="true" signature="8992:9119" placeholder="..." />
+                <marker date="1451768816653" expanded="true" signature="9030:9041" placeholder="..." />
+                <marker date="1451768816653" expanded="true" signature="9240:9520" placeholder="..." />
+                <marker date="1451768816653" expanded="true" signature="9314:9491" placeholder="..." />
+                <marker date="1451768816653" expanded="true" signature="9429:9452" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.814815">
-              <caret line="323" column="0" selection-start-line="323" selection-start-column="0" selection-end-line="323" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.37958115">
+              <caret line="313" column="26" selection-start-line="313" selection-start-column="26" selection-end-line="313" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -60,7 +69,7 @@
       <file leaf-file-name="simple.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/pages/tables/simple.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.6666667">
+            <state vertical-scroll-proportion="0.0">
               <caret line="648" column="26" selection-start-line="601" selection-start-column="18" selection-end-line="648" selection-end-column="26" />
               <folding />
             </state>
@@ -71,20 +80,10 @@
         <entry file="file://$PROJECT_DIR$/static/dist/js/media.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="45" column="3" selection-start-line="45" selection-start-column="3" selection-end-line="45" selection-end-column="3" />
+              <caret line="33" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="3" />
               <folding>
                 <marker date="1451738553559" expanded="true" signature="1354:1385" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="media_glance.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/media_glance.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="162" column="33" selection-start-line="162" selection-start-column="33" selection-end-line="162" selection-end-column="33" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -93,9 +92,31 @@
         <entry file="file://$PROJECT_DIR$/aang.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="150" column="0" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+              <caret line="145" column="11" selection-start-line="145" selection-start-column="11" selection-end-line="145" selection-end-column="11" />
               <folding>
                 <element signature="e#0#69#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="author_glance.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/author_glance.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.962963">
+              <caret line="185" column="39" selection-start-line="185" selection-start-column="39" selection-end-line="185" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="author.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/dist/js/author.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+              <folding>
+                <marker date="1451767782265" expanded="true" signature="1339:1370" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -105,7 +126,7 @@
         <entry file="file://$PROJECT_DIR$/alchemi_rest/rest_handler.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -115,6 +136,13 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -123,10 +151,12 @@
       <list>
         <option value="$PROJECT_DIR$/static/dist/js/media.js" />
         <option value="$PROJECT_DIR$/templates/media_glance.html" />
-        <option value="$PROJECT_DIR$/aang.py" />
         <option value="$PROJECT_DIR$/alchemi_rest/rest_handler.py" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/author_glance.html" />
+        <option value="$PROJECT_DIR$/aang.py" />
+        <option value="$PROJECT_DIR$/static/dist/js/author.js" />
         <option value="$PROJECT_DIR$/static/dist/js/sentiment.js" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
       </list>
     </option>
   </component>
@@ -136,9 +166,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="24" />
+    <option name="y" value="-4" />
     <option name="width" value="1366" />
-    <option name="height" value="744" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -165,6 +195,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -212,7 +243,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
+              <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -230,24 +265,72 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tables" />
+              <option name="myItemId" value="dist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/aang.py" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
   </component>
   <component name="RunManager" selected="Python.Aang">
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="aang" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="aang" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="aang" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -264,6 +347,125 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/aang.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="aang" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="aang" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="aang" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="aang" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="aang" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
     <configuration default="false" name="Aang" type="PythonConfigurationType" factoryName="Python">
@@ -302,7 +504,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1366" height="744" extended-state="6" />
+    <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -341,11 +543,11 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/aang.py</url>
-          <line>179</line>
+          <line>206</line>
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/aang.py</url>
-          <line>149</line>
+          <line>176</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
@@ -358,8 +560,48 @@
           <line>52</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/aang.py</url>
+          <line>130</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/aang.py</url>
+          <line>131</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/aang.py</url>
+          <line>125</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/aang.py</url>
+          <line>133</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/aang.py</url>
+          <line>134</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/aang.py</url>
+          <line>137</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/aang.py</url>
+          <line>139</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/aang.py</url>
+          <line>136</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -367,18 +609,178 @@
     <entry file="file://$PROJECT_DIR$/static/dist/js/sentiment.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="270" column="3" selection-start-line="270" selection-start-column="3" selection-end-line="270" selection-end-column="3" />
+          <folding>
+            <marker date="1451768816653" expanded="true" signature="4431:4474" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="5245:5260" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="5782:5855" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="6777:6850" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="7180:7195" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="8150:8220" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="8992:9093" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="8992:9119" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="9030:9041" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="9240:9520" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="9314:9491" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="9429:9452" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="323" column="0" selection-start-line="323" selection-start-column="0" selection-end-line="323" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/pages/tables/simple.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="648" column="26" selection-start-line="601" selection-start-column="18" selection-end-line="648" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/dist/js/media.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="3" selection-start-line="45" selection-start-column="3" selection-end-line="45" selection-end-column="3" />
+          <folding>
+            <marker date="1451738553559" expanded="true" signature="1354:1385" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/media_glance.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="162" column="33" selection-start-line="162" selection-start-column="33" selection-end-line="162" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aang.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="125" column="36" selection-start-line="125" selection-start-column="36" selection-end-line="125" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python2.7/socket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alchemi_rest/rest_handler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/dist/js/sentiment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1451768816653" expanded="true" signature="4431:4474" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="5245:5260" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="5782:5855" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="6777:6850" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="7180:7195" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="8150:8220" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="8992:9093" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="8992:9119" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="9030:9041" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="9240:9520" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="9314:9491" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="9429:9452" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="323" column="0" selection-start-line="323" selection-start-column="0" selection-end-line="323" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/pages/tables/simple.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="648" column="26" selection-start-line="601" selection-start-column="18" selection-end-line="648" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/dist/js/media.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="3" selection-start-line="45" selection-start-column="3" selection-end-line="45" selection-end-column="3" />
+          <folding>
+            <marker date="1451738553559" expanded="true" signature="1354:1385" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/media_glance.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="162" column="33" selection-start-line="162" selection-start-column="33" selection-end-line="162" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aang.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="150" column="0" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alchemi_rest/rest_handler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/dist/js/sentiment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
           <folding>
-            <marker date="1451747831945" expanded="true" signature="4431:4474" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="5245:5260" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="5782:5855" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="6777:6850" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="7180:7195" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="8150:8220" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="8787:8888" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="8787:8914" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="8825:8836" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="9035:9163" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="4431:4474" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="5245:5260" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="5782:5855" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="6777:6850" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="7180:7195" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="8150:8220" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="8992:9093" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="8992:9119" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="9030:9041" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="9240:9520" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="9314:9491" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="9429:9452" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -442,16 +844,18 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="244" column="6" selection-start-line="244" selection-start-column="6" selection-end-line="244" selection-end-column="6" />
           <folding>
-            <marker date="1451747831945" expanded="true" signature="4431:4474" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="5245:5260" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="5782:5855" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="6777:6850" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="7180:7195" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="8150:8220" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="8787:8888" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="8787:8914" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="8825:8836" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="9035:9163" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="4431:4474" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="5245:5260" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="5782:5855" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="6777:6850" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="7180:7195" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="8150:8220" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="8992:9093" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="8992:9119" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="9030:9041" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="9240:9520" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="9314:9491" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="9429:9452" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -497,16 +901,18 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1451747831945" expanded="true" signature="4431:4474" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="5245:5260" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="5782:5855" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="6777:6850" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="7180:7195" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="8150:8220" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="8787:8888" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="8787:8914" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="8825:8836" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="9035:9163" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="4431:4474" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="5245:5260" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="5782:5855" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="6777:6850" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="7180:7195" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="8150:8220" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="8992:9093" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="8992:9119" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="9030:9041" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="9240:9520" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="9314:9491" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="9429:9452" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -518,14 +924,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/media_glance.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="162" column="33" selection-start-line="162" selection-start-column="33" selection-end-line="162" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/pages/UI/modals.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.27586207">
@@ -533,68 +931,104 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aang.py">
+    <entry file="file://$PROJECT_DIR$/static/pages/tables/simple.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="150" column="0" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#69#0" expanded="true" />
-          </folding>
+          <caret line="648" column="26" selection-start-line="601" selection-start-column="18" selection-end-line="648" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/dist/js/media.js">
+    <entry file="file:///usr/lib/python2.7/socket.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="3" selection-start-line="45" selection-start-column="3" selection-end-line="45" selection-end-column="3" />
-          <folding>
-            <marker date="1451738553559" expanded="true" signature="1354:1385" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.68817204">
+          <caret line="228" column="0" selection-start-line="228" selection-start-column="0" selection-end-line="228" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/alchemi_rest/rest_handler.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/pages/tables/simple.html">
+    <entry file="file://$PROJECT_DIR$/templates/media_glance.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6666667">
-          <caret line="648" column="26" selection-start-line="601" selection-start-column="18" selection-end-line="648" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.39225182">
+          <caret line="170" column="20" selection-start-line="0" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/templates/author_glance.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.814815">
-          <caret line="323" column="0" selection-start-line="323" selection-start-column="0" selection-end-line="323" selection-end-column="0" />
+        <state vertical-scroll-proportion="-11.962963">
+          <caret line="185" column="39" selection-start-line="185" selection-start-column="39" selection-end-line="185" selection-end-column="39" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/dist/js/media.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="3" />
+          <folding>
+            <marker date="1451738553559" expanded="true" signature="1354:1385" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aang.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="145" column="11" selection-start-line="145" selection-start-column="11" selection-end-line="145" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/dist/js/author.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+          <folding>
+            <marker date="1451767782265" expanded="true" signature="1339:1370" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/dist/js/sentiment.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4318182">
-          <caret line="259" column="0" selection-start-line="259" selection-start-column="0" selection-end-line="259" selection-end-column="0" />
+        <state vertical-scroll-proportion="-4.387097">
+          <caret line="158" column="30" selection-start-line="158" selection-start-column="28" selection-end-line="158" selection-end-column="30" />
           <folding>
-            <marker date="1451747831945" expanded="true" signature="4431:4474" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="5245:5260" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="5782:5855" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="6777:6850" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="7180:7195" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="8150:8220" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="8787:8888" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="8787:8914" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="8825:8836" placeholder="..." />
-            <marker date="1451747831945" expanded="true" signature="9035:9163" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="4431:4474" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="5245:5260" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="5782:5855" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="6777:6850" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="7180:7195" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="8150:8220" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="8992:9093" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="8992:9119" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="9030:9041" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="9240:9520" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="9314:9491" placeholder="..." />
+            <marker date="1451768816653" expanded="true" signature="9429:9452" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37958115">
+          <caret line="313" column="26" selection-start-line="313" selection-start-column="26" selection-end-line="313" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>

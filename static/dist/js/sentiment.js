@@ -257,6 +257,10 @@ $.get(ajaxUrl, function(data, status){
         window.location.href = "/media?channel="+media_src+"&subject="+getParameterByName('subject');
         //alert();
     });
+    $('.author-link').click(function(data){
+       var author_src = $(this).data('author');
+        window.location.href = "author?author="+ author_src +"&subject="+ getParameterByName('subject');
+    });
 
     var tabHtml = '<tr>'+
                       '<th style="width: 10px">#</th>'+
@@ -267,10 +271,17 @@ $.get(ajaxUrl, function(data, status){
     for(var i = 0; i< author_names.length; i++){
         tabHtml += '<tr>'+
                       '<td>'+(i+1)+'</td>'+
-                      '<td>'+ author_names[i]+'</td>'+
+                      '<td><a class="author-link" data-author="'+
+                encodeURIComponent(author_names[i])
+            +'" style="color: white!important;" href="#">'+ author_names[i]+'</a></td>'+
                     '</tr>';
     }
+
     $('#author-box').html(tabHtml);
+    $('.author-link').click(function(data){
+       var author_src = $(this).data('author');
+        window.location.href = "author?author="+ author_src +"&subject="+ getParameterByName('subject');
+    });
 });
 $('#data-refresh').click(function(data){
     $('#data-refresh').html('<i class="fa fa-refresh fa-spin"></i> Refresh');

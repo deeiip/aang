@@ -119,6 +119,33 @@ def media_det_ajax():
     return Response(ret, mimetype='text/json')
 
 
+@app.route('/author_data')
+def author_data():
+    about = request.args.get('subject')
+    author = request.args.get('author')
+    if (about is None) or (author is None):
+        return "Invaid Ajax Query"
+    else:
+        about = about.lower()
+        # author = author.lower()
+        result = db.session.query(NewsModel).filter(NewsModel.author.contains(author)).filter_by(about=about)
+        count = 0
+        ret = '['
+        for item in result:
+            ret += create_json_from_model(item) + ','
+            count += 1
+        if count != 0:
+            ret = ret[:-1]
+        ret += ']'
+    return Response(ret, mimetype='text/json')
+
+
+@app.route('/author')
+def author():
+    src = request.args.get('author')
+    return render_template('author_glance.html', detail_by=src)
+
+
 @app.route('/media')
 def media_house_involvement():
     src = request.args.get('channel')
@@ -127,7 +154,7 @@ def media_house_involvement():
 
 @app.errorhandler(404)
 def page_not_found(e):
-    create_db_entry('tcs')
+    # create_db_entry('tcs')
     return render_template('404.html', error_code='404', message='We could not find the page you were looking for.')\
         , 404
 

@@ -127,27 +127,24 @@
           <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
             <li class="active treeview">
-              <a href="#">
+              <a id="sentiment-link" href="#">
                 <i class="fa fa-dashboard"></i> <span>Sentiment Analysis</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
             </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-files-o"></i>
-                <span>Trend In Media</span>
-                <span class="label label-primary pull-right">2</span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o"></i> Coverage</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Concepts/Keywords</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fa fa-calendar"></i> <span>Export as Excel</span>
+              <li>
+              <a id="entity-link" href="#">
+                <i class="fa fa-calendar"></i> <span>Entities</span>
                 <small class="label pull-right bg-aqua">New</small>
               </a>
             </li>
+              <li>
+
+              <a href="#">
+                <i class="fa fa-files-o"></i> <span>Export as Excel</span>
+                <small class="label pull-right bg-aqua">New</small>
+              </a>
+            </li>
+
             <li><a href="#"><i class="fa fa-book"></i> <span>View Raw</span></a></li>
             <li class="header">Learn</li>
             <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>About</span></a></li>
@@ -422,6 +419,7 @@
 {#    <!--  for  purposes -->#}
 {#    <script src="../static/dist/js/app.min.js"></script>#}
     <script src="../static/dist/js/sentiment.js"></script>
+    <script src="../static/dist/js/router.js"></script>
 {#    <script src="../static/plugins/jQuery/jQuery-2.1.4.min.js"></script>#}
 {#    <!-- Bootstrap 3.3.5 -->#}
 {#    <script src="../static/bootstrap/js/bootstrap.min.js"></script>#}

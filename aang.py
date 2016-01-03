@@ -177,6 +177,11 @@ def create_data():
         return "fail"
 
 
+@app.route('/keywords')
+def concepts_graph():
+    return render_template('concept_graph.html')
+
+
 def create_db_entry(name, from_file=True):
     name = name.lower()
     reqst = Request(API_KEY, name)

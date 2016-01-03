@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bde4d936-0ade-4da8-afee-aa46f8dcaa55" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/dist/js/router.js" afterPath="$PROJECT_DIR$/static/dist/js/router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/concept_graph.html" afterPath="$PROJECT_DIR$/templates/concept_graph.html" />
     </list>
     <ignored path="aang.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,14 +53,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="router.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="router.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/dist/js/router.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5318182">
+            <state vertical-scroll-proportion="0.0">
               <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
               <folding>
                 <element signature="n#!!doc;n#getParameterByName#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="concept_graph.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/concept_graph.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.71727747">
+              <caret line="166" column="69" selection-start-line="166" selection-start-column="69" selection-end-line="166" selection-end-column="69" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -89,13 +98,13 @@
         <option value="$PROJECT_DIR$/static/dist/js/keyword.js" />
         <option value="$PROJECT_DIR$/templates/media_glance.html" />
         <option value="$PROJECT_DIR$/templates/author_glance.html" />
-        <option value="$PROJECT_DIR$/templates/concept_graph.html" />
         <option value="$PROJECT_DIR$/aang.py" />
         <option value="$PROJECT_DIR$/static/dist/js/raw.js" />
         <option value="$PROJECT_DIR$/static/dist/js/raw_data.js" />
         <option value="$PROJECT_DIR$/templates/raw.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/static/dist/js/router.js" />
+        <option value="$PROJECT_DIR$/templates/concept_graph.html" />
       </list>
     </option>
   </component>
@@ -178,28 +187,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -960,13 +947,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/concept_graph.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08716707">
-          <caret line="113" column="55" selection-start-line="0" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/dist/js/raw.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1056,11 +1036,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/dist/js/router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5318182">
+        <state vertical-scroll-proportion="0.0">
           <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
           <folding>
             <element signature="n#!!doc;n#getParameterByName#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/concept_graph.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.71727747">
+          <caret line="166" column="69" selection-start-line="166" selection-start-column="69" selection-end-line="166" selection-end-column="69" />
+          <folding />
         </state>
       </provider>
     </entry>

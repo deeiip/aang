@@ -152,6 +152,11 @@ def media_house_involvement():
     return render_template('media_glance.html', detail_by = src)
 
 
+@app.route('/raw_data')
+def raw_data():
+    return render_template('raw.html')
+
+
 @app.errorhandler(404)
 def page_not_found(e):
     # create_db_entry('tcs')

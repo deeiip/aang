@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Aang | Media Details</title>
+    <title>Aang | Raw Data</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
@@ -118,19 +118,19 @@
                             class="fa fa-angle-left pull-right"></i>
                     </a>
                 </li>
-                <li class="active">
-              <a id="entity-link" href="#">
-                <i class="fa fa-calendar"></i> <span>Entities</span>
-                <small class="label pull-right bg-aqua">New</small>
-              </a>
-            </li>
+                <li>
+                    <a id="entity-link" href="#">
+                        <i class="fa fa-calendar"></i> <span>Entities</span>
+                        <small class="label pull-right bg-aqua">New</small>
+                    </a>
+                </li>
                 <li>
                     <a href="#">
                         <i class="fa fa-calendar"></i> <span>Export as Excel</span>
                         <small class="label pull-right bg-aqua">New</small>
                     </a>
                 </li>
-                <li><a id="raw-link" href="#"><i class="fa fa-book"></i> <span>View Raw</span></a></li>
+                <li class="active"><a id="raw-link" href="#"><i class="fa fa-book"></i> <span>View Raw</span></a></li>
                 <li class="header">Learn</li>
                 <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>About</span></a></li>
                 <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Documentation</span></a></li>
@@ -142,41 +142,13 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
-        <section class="content-header">
-
-
-        </section>
 
         <!-- Main content -->
         <section class="content" id="content-body">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="box">
-                        <div class="box-header with-border">
-                            <h3 class="box-title">Entity Analysis</h3>
-                            <div class="box-tools pull-right">
-                                <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                                </button>
-
-                                <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
-                                </button>
-                            </div>
-                        </div><!-- /.box-header -->
-                        <div id="keyword-graph" class="box-body"
-                             style="height: 500px; margin-left: 4%; margin-top: 4%; width: 90%">
-
-                        </div><!-- ./box-body -->
-                        <div class="box-footer">
-                            <ul class="nav nav-pills nav-stacked">
-                                <li><a href="#"><i style="color: #00a7d0" class="fa fa-circle-o"></i> &nbsp; Size of a
-                                    bubble denotes relevance of the concept </a></li>
-                                <li><a href="#"><i style="color: #8a6d3b" class="fa fa-circle-o"></i> &nbsp; Hover over
-                                    a bubble to know more </a></li>
-                            </ul>
-                        </div><!-- /.box-footer -->
-                    </div><!-- /.box -->
-                </div><!-- /.col -->
-            </div><!-- /.row -->
+            <div class="alert alert-info alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <h4 align="centre"><i class="icon fa fa-info"></i> <i class="fa fa-refresh fa-spin fa-2x"></i></h4>
+            </div>
         </section><!-- /.content -->
     </div><!-- /.content-wrapper -->
     <footer class="main-footer">
@@ -196,13 +168,14 @@
 <script src="../static/plugins/jQuery/jQuery-2.1.4.min.js"></script>
 <!-- Bootstrap 3.3.5 -->
 <script src="../static/bootstrap/js/bootstrap.min.js"></script>
+<script src="../static/dist/js/raw_data.js"></script>
 <!-- FastClick -->
 <script src="../static/plugins/fastclick/fastclick.min.js"></script>
 <!-- App -->
 <script src="../static/dist/js/app.min.js"></script>
 <!--  for demo purposes -->
 <script src="../static/dist/js/demo.js"></script>
-<script src="../static/dist/js/keyword.js"></script>
+
 <script src="../static/dist/js/router.js"></script>
 </body>
 </html>

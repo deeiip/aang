@@ -11,3 +11,5 @@ var targetLink = '/keywords?subject='+getParameterByName('subject');
 $('#entity-link').attr("href", targetLink);
 var senti_link = '/?subject='+getParameterByName('subject');
 $('#sentiment-link').attr('href', senti_link);
+var raw_link = '/raw_data?subject='+getParameterByName('subject');
+$('#raw-link').attr('href', raw_link);

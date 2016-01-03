@@ -17,7 +17,7 @@ module.exports = function (grunt) {
       tasks: ["less", "uglify"]
     },
     // "less"-task configuration
-    // This task will compile all less files upon saving to create both AdminLTE.css and AdminLTE.min.css
+    // This task will compile all less files upon saving to create both AdminLTE.css and Aang.min.css
     less: {
       // Development not compressed
       development: {

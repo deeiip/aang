@@ -1,4 +1,4 @@
-from flask import Flask, redirect, request, render_template, Response
+from flask import Flask, redirect, request, render_template, Response, make_response
 from flask.ext.sqlalchemy import SQLAlchemy
 import json
 from alchemi_rest import *
@@ -57,6 +57,23 @@ def create_json_from_model(model):
     #         print(getattr(model, item))
     return json.dumps(temp_dict)
 
+
+def create_csv_entry_from_model(model):
+    # temp_dict = {}
+    ret = ""
+    for item in model.attrs:
+        current = getattr(model, item)
+        ret += '"' + current + '",'
+
+        # temp_dict[item] = current
+        # print(getattr(model, item))
+    # for item in dir(model):
+    #     if not item.startswith('__'):
+    #         print(item)
+    #         print(getattr(model, item))
+    ret = ret[:-1]
+    ret += "\n"
+    return ret
 
 @app.route('/')
 @app.route('/Index')
@@ -215,6 +232,31 @@ def create_db_entry(name, from_file=True):
         news_model.concepts = constr
         db.session.merge(news_model)
     db.session.commit()
+
+
+@app.route('/download')
+def download():
+    about = request.args.get('subject')
+
+    if about is None:
+        return "Invalid Ajax query"
+    else:
+        # create_db_entry('TCS')
+        about = about.lower()
+        ret = ''
+        result = db.session.query(NewsModel).filter_by(about=about)
+        count = 0
+        for item in result:
+            ret += create_csv_entry_from_model(item)
+            count += 1
+
+    # We need to modify the response, so the first thing we
+    # need to do is create a response out of the CSV string
+    response = make_response(ret)
+    # This is the key: Set the right header for the response
+    # to be downloaded, instead of just printed on the browser
+    response.headers["Content-Disposition"] = "attachment; filename=raw_data.csv"
+    return response
 
 
 if __name__ == '__main__':

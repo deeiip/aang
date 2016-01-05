@@ -44,52 +44,7 @@
                 <span class="sr-only">Toggle navigation</span>
             </a>
             <div class="navbar-custom-menu">
-                <ul class="nav navbar-nav">
-                    <!-- Messages: style can be found in dropdown.less-->
 
-                    <!-- Notifications: style can be found in dropdown.less -->
-                    <li class="dropdown notifications-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-bell-o"></i>
-                            <span class="label label-warning">3</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="header">You have 3 notifications</li>
-                            <li>
-                                <!-- inner menu: contains the actual data -->
-                                <ul class="menu">
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-users text-aqua"></i> Recent good coverage from TVX
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-warning text-yellow"></i> Recent bad coverage from TVY
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-users text-red"></i> Most connected media is TVZ
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="footer"><a href="#">View all</a></li>
-                        </ul>
-                    </li>
-                    <!-- Tasks: style can be found in dropdown.less -->
-
-                    <!-- User Account: style can be found in dropdown.less -->
-                    <li class="dropdown user user-menu">
-
-
-                    </li>
-                    <!-- Control Sidebar Toggle Button -->
-                    <li>
-                        <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-                    </li>
-                </ul>
             </div>
         </nav>
     </header>
@@ -113,27 +68,27 @@
             <ul class="sidebar-menu">
                 <li class="header">MAIN NAVIGATION</li>
                 <li class="treeview">
-                    <a id="sentiment-link" href="#">
+                    <a id="sentiment-link" href="/">
                         <i class="fa fa-dashboard"></i> <span>Sentiment Analysis</span> <i
                             class="fa fa-angle-left pull-right"></i>
                     </a>
                 </li>
                 <li>
-                    <a id="entity-link" href="#">
+                    <a id="entity-link" href="/">
                         <i class="fa fa-calendar"></i> <span>Entities</span>
                         <small class="label pull-right bg-aqua">New</small>
                     </a>
                 </li>
                 <li>
 
-              <a id="csv-link" href="#">
+              <a id="csv-link" href="/">
                 <i class="fa fa-files-o"></i> <span>Export as CSV</span>
                 <small class="label pull-right bg-aqua">New</small>
               </a>
             </li>
-                <li class="active"><a id="raw-link" href="#"><i class="fa fa-book"></i> <span>View Raw</span></a></li>
+                <li class="active"><a id="raw-link" href="/"><i class="fa fa-book"></i> <span>View Raw</span></a></li>
                 <li class="header">Learn</li>
-                <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>About</span></a></li>
+                <li><a href="/about"><i class="fa fa-circle-o text-red"></i> <span>About</span></a></li>
 
             </ul>
         </section>
@@ -204,7 +159,5 @@
 <script src="../static/dist/js/app.min.js"></script>
 <!--  for demo purposes -->
 <script src="../static/dist/js/demo.js"></script>
-
-<script src="../static/dist/js/router.js"></script>
 </body>
 </html>

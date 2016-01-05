@@ -300,4 +300,5 @@ $('#data-refresh').click(function(data){
 
 $('.data-close').click(function(data){
     $('.modal').hide();
+    $('#overall-waiting').hide();
 });
